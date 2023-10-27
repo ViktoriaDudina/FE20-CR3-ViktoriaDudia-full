@@ -41,11 +41,11 @@
     <hr>
 
     <div id="total" class="cart-total me-0 pb-2 text-center text-sm-end fw-bold">
-        <p class="cart-total-title m-0">Total <span id="price" class="cart-total-price h4 p-0 pe-sm-5 m-0 fw-bold">€
+        <p class="cart-total-title m-0">Total <span id="price" class="cart-total-price h4 p-0 pe-sm-5 m-0 fw-bold">
                 {{total | currency:'EUR':true}}</span></p>
-        <p class="cart-service-fee">Service Fee (10%): € {{serviceFee | currency:'EUR':true}}</p>
+        <p class="cart-service-fee">Service Fee (10%): {{serviceFee | currency:'EUR':true}}</p>
         <p *ngIf="discountApplied" class="cart-discount">15% Discount Applied!</p>
-        <p class="cart-final-total m-0 fw-bold">Final Total: € {{total | currency:'EUR':true}}</p>
+        <p class="cart-final-total m-0 fw-bold">Final Total: {{total | currency:'EUR':true}}</p>
     </div>
 </div>
 
