@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.btn {
+    background-color: rgb(35, 181, 174);
+    color: white;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    transition: all .3s ease;
+    background: rgb(4, 156, 149);
+}
+
+h2 {
+    font-family: "Great Vibes", sans-serif;
+    font-size: 3rem;
+
+}
+
+.orderForm {
+
+    margin-top: 50px;
+}

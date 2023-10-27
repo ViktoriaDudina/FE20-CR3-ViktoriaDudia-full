@@ -1,0 +1,30 @@
+.navbar {
+    background: rgb(158, 33, 48);
+    background: linear-gradient(90deg, rgba(158, 33, 48, 1) 0%, rgba(201, 80, 99, 1) 26%, rgba(209, 109, 141, 1) 50%, rgba(201, 80, 99, 1) 75%, rgba(158, 33, 48, 1) 100%);
+}
+
+.cart span {
+    padding: 10px;
+    ;
+}
+
+.cart span:hover {
+    background-color: rgba(201, 80, 99, 1);
+    border-radius: 4px;
+    transform: scale(1.125);
+    transition: all .3s ease;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: rgba(201, 80, 99, 1);
+    border-radius: 4px;
+    transform: scale(1.125);
+    transition: all .3s ease;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}

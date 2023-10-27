@@ -1,0 +1,69 @@
+<div class="container">
+    <div *ngFor="let val of cart">
+        <div class="cart-row row gx-0 m-3 border border-3 rounded-pill"
+            style="border-color: rgb(35, 181, 174 , 0.5) !important;">
+            <div class="cart-item col-6 ps-md-5 my-2 d-flex align-items-center justify-content-start">
+                <img class="cart-item-image" src="{{val.image}}" width="100" height="100" alt={{val.name}}>
+                <div class="cart-item-title h5 ms-2">{{val.name}}</div>
+            </div>
+            <div class="cart-qtty-action col-2 d-flex justify-content-center align-items-center">
+                <div class="d-flex">
+                    <i class="plus fs-5 bi bi-plus-circle-fill"></i>
+                </div>
+
+                <div class="d-flex">
+                    <i class="minus fs-5 bi bi-dash-circle-fill"></i>
+                </div>
+
+
+                <div class="cart-qtty-action col-2 d-flex justify-content-center align-items-center">
+                    <div class="d-flex">
+                        <button (click)="decrementQuantity(val)" class="btn plusminus">-</button>
+                    </div>
+                    <div class="text-center m-3 cart-quantity h4 w-25">
+                        {{val.quantity}}
+                    </div>
+                    <div class="d-flex">
+                        <button (click)="incrementQuantity(val)" class="btn plusminus">+</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" col-1 d-flex justify-content-start align-items-center">
+                <i class="del fs-4 bi bi-trash3-fill text-danger"></i>
+            </div>
+            <div class="cart-price col-3 h5 my-auto text-end p-2 pe-sm-5">{{val.price | currency:'EUR':true}}
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div id="total" class="cart-total me-0 pb-2 text-center text-sm-end fw-bold">
+        <p class="cart-total-title m-0">Total <span id="price" class="cart-total-price h4 p-0 pe-sm-5 m-0 fw-bold">€
+                {{total | currency:'EUR':true}}</span></p>
+        <p class="cart-service-fee">Service Fee (10%): € {{serviceFee | currency:'EUR':true}}</p>
+        <p *ngIf="discountApplied" class="cart-discount">15% Discount Applied!</p>
+        <p class="cart-final-total m-0 fw-bold">Final Total: € {{total | currency:'EUR':true}}</p>
+    </div>
+</div>
+
+<div class="container orderForm">
+    <h2>Order Form</h2>
+
+    <form (ngSubmit)="submitOrder()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address:</label>
+            <textarea class="form-control" id="address" name="address" [(ngModel)]="address" required></textarea>
+        </div>
+        <button type="submit" class="btn btnColor m-3">Submit Order</button>
+    </form>
+
+
+
+</div>

@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div class="product-img">
+        <img src="{{product.image}}" height="420" width="420">
+    </div>
+    <div class="product-info">
+        <div class="product-text">
+            <h1>{{product.name}}</h1>
+            <h2>{{product.ingredients}}</h2>
+            <p>{{product.description}} </p>
+        </div>
+        <div class="product-price-btn">
+            <p>{{product.price | currency:'EUR':true }}</p>
+            <button type="button" (click)="addToCart()">buy now</button>
+        </div>
+    </div>
+</div>

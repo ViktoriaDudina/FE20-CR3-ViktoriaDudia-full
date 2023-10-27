@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.banner {
+    background-image: url("/assets/images/hero.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+
+}
+
+.herotext {
+    padding: 180px;
+    background-color: rgba(0, 0, 0, 0.502);
+}
+
+h1 {
+    font-family: "Great Vibes", sans-serif;
+    font-size: 3.5rem;
+
+}
+
+button {
+    padding: 14px;
+    margin: 40px 15px;
+    background-color: rgb(35, 181, 174) !important;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+    transition: all .3s ease;
+    border-radius: 34px;
+}
+
+button:hover {
+    transform: scale(1.125);
+    background-color: rgb(67, 204, 197) !important;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    transition: all .3s ease;
+}
+
+
+.container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(245, 244, 241);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 38px;
+    filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.restaurant-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.restaurant-description {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    font-family: "Great Vibes", sans-serif;
+    font-size: 3rem;
+    margin: 20px 0;
+    padding-top: 30px;
+}
+
+h3 {
+    font-family: "Great Vibes", sans-serif;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    display: inline-block;
+    background-color: #c8211d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: #333;
+}
+
+
+
+
+.why-choose {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.choose-option {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid rgb(158, 33, 48);
+    ;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+
+.tab-pane {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.tab-pane img {
+    margin-top: 50px;
+}
