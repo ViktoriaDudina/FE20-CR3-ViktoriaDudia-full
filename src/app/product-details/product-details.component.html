@@ -10,7 +10,7 @@
         </div>
         <div class="product-price-btn">
             <p>{{product.price | currency:'EUR':true }}</p>
-            <button type="button" (click)="addToCart()">buy now</button>
+            <button type="button" (click)="addToCart(product)">buy now</button>
         </div>
     </div>
 </div>

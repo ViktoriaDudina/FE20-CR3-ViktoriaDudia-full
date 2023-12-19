@@ -3,6 +3,7 @@ import { iproducts } from '../iproducts';
 import { ActivatedRoute, Params } from '@angular/router';
 import { products } from '../products';
 import { CartService } from 'src/cart.service';
+import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-product-details',
@@ -16,10 +17,16 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private CS: CartService) { }
 
-  addToCart() {
-    alert("Your taste journey has been added to your cart");
-    this.CS.addToCart(this.product)
-
+  addToCart(product: iproducts) {
+    Swal.fire({ // Использование SweetAlert
+      title: "Success!",
+      text: product.name + " has been added to the cart",
+      imageUrl: product.image,
+      imageWidth: 250,
+      imageHeight: 250,
+      imageAlt: "Custom image"
+    });
+    this.CS.addToCart(product);
   }
 
 

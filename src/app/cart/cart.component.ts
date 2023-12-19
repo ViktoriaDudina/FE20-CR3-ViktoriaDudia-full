@@ -11,7 +11,8 @@ import { CartService } from 'src/cart.service';
 })
 export class CartComponent implements OnInit {
   cart: iproducts[] = [];
-  total: number = 0;
+  totalBeforeFees: number = 0;
+  finalTotal: number = 0;
   name: string = '';
   address: string = '';
   serviceFee: number = 0;
@@ -29,26 +30,26 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cart = this.CS.getCart();
-
-
     this.calculateTotal();
+    this.calculateServiceFeeAndDiscount();
 
     this.CS.totalUpdated.subscribe((newTotal: number) => {
-      this.total = newTotal;
+      this.calculateTotal();
       this.calculateServiceFeeAndDiscount();
     });
   }
 
   calculateTotal() {
-    this.total = this.cart.reduce((sum, product) => sum + (product.price * product.quantity), 0);
+    this.totalBeforeFees = this.cart.reduce((sum, product) => sum + (product.price * product.quantity), 0);
   }
 
   calculateServiceFeeAndDiscount() {
-    this.serviceFee = this.total * 0.1;
+    this.serviceFee = this.totalBeforeFees * 0.1;
 
-    if (this.total > 40 && !this.discountApplied) {
+    this.finalTotal = this.totalBeforeFees + this.serviceFee;
 
-      this.total = this.total * 0.85;
+    if (this.totalBeforeFees > 40 && !this.discountApplied) {
+      this.finalTotal *= 0.85;
       this.discountApplied = true;
     }
   }

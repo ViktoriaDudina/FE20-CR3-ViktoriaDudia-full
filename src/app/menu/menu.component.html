@@ -15,7 +15,7 @@
                 </ul>
                 <div class="card-body" *ngIf="list.availability==true">
                     <button routerLink="/product/{{i}}" type="button" class="btn  outline">Details</button>
-                    <button type="button" class="btn fill" (click)="addToCart()">Order</button>
+                  <button type="button" class="btn fill" (click)="addToCart(list)">Order</button>
                 </div>
                 <div *ngIf="list.availability==false">
                     <p>Not available</p>
@@ -24,3 +24,4 @@
         </div>
     </div>
 </div>
+
